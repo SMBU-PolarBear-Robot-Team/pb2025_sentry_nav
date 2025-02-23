@@ -260,6 +260,9 @@ controller_server:
       max_translation_speed: 2.5
       min_rotation_speed: -3.0
       max_rotation_speed: 3.0
+      curvature_threshold_low: 0.15         # 低曲率阈值，低于此值不减速。 建议值：0.1
+      curvature_threshold_high: 0.35        # 高曲率阈值，高于此值大幅减速。 建议值：0.3
+      reduction_ratio_at_high_curvature: 0.6 # 高曲率时的速度降低比例。 建议值：0.5 (即减速 50%)
 
 local_costmap:
   local_costmap:
